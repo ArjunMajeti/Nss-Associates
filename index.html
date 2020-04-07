@@ -590,7 +590,29 @@
     </div>
     
   </main><!-- End #main -->
+<!-- POP-Up -->
+<!-- Button trigger modal -->
 
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-info" id="staticBackdropLabel">NSS & Associates</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h4> Welcome to <b>NSS & Associates</b> , We are glad to Help You....... </h4>
+      </div>
+      <div class="m-3">
+        <button type="button" class="btn btn-info float-right " data-dismiss="modal">Close</button>
+      
+      </div>
+    </div>
+  </div>
+</div>
   <!-- ======= Footer ======= -->
   <footer id="footer">
     <div class="container">
@@ -610,7 +632,7 @@
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/selecao-bootstrap-template/ -->
-        Designed by <a href="">Arjun Majeti</a>
+        Designed by <a href="https://github.com/ArjunMajeti" target="_blank">Arjun Majeti</a>
       </div>
     </div>
   </footer><!-- End Footer -->
@@ -631,7 +653,11 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  <script type="text/javascript">
+    $(window).on('load',function(){
+        $('#staticBackdrop').modal('show');
+    });
+</script>
 </body>
 
 </html>
