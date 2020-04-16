@@ -43,6 +43,22 @@
   ======================================================== -->
 
   <style>
+    #header.header-transparent {
+    background:white;
+}
+.nav-menu a {
+    display: block;
+    position: relative;
+    color:black;
+    padding: 5px 15px 7px 15px;
+    margin-left: 5px;
+    transition: 0.3s;
+    font-size: 14px;
+    border-radius: 50px;
+    font-family: "Open Sans", sans-serif;
+}
+
+
     h2.content-box-heading {
     color: #e26600;
 }
@@ -50,23 +66,78 @@
   background-repeat: no-repeat;
   position: fixed;
   opacity: 0.5;
-  left:35px;
+  left:45px;
   bottom:15px;
   height:auto;
   height:50px;
 }
+#more {display: none;}
+.fixed-callout {
+    padding: 15px 20px;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    bottom: 27px;
+    text-align: center;
+    animation: move 6s infinite forwards;
+    z-index: 9999;
+}
+.hidden-xs {
+    display: block;
+}
+.fixed-callout h4 {
+    padding: 0px;
+    margin: 0px 0px 8px 0px;
+    color: #0079be;
+    font-weight: bold;
+}
+.fixed-callout a {
+    display: block;
+    padding: 2px 0;
+    font-size: 16px;
+    color: #323232 !important;
+    text-decoration: none;
+}
+.fixed-callout img {
+    width: 24px;
+}
+img {
+    vertical-align: middle;
+}
+
+#features{
+  padding: 10px 0;
+}
+
+.content-mobile {display: block;}
+
+@media screen and (max-width: 768px) {
+
+.content-mobile {display: none;}
+
+}
+/* .image-QrCode{
+  border-radius: 10px;
+    box-shadow: 0 15px 15px black;
+} */
   </style>
 </head>
 
 <body>
-
+ 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center  header-transparent ">
+    <div class=sidebar">
+      <!-- <a href="tel:+91 73964 03088">+91 73964 03088</a>
+      <a href="mailto:info@quicktaxperts.com">Nsscateam@gmail.com</a> -->
+   
+    </div>
     <div class="container d-flex align-items-center">
 
       <div class="logo mr-auto">
         
-        <h1 class="text-light"><a href="index.html"><img src="./assets/img/Watermark-logo.png" style="width:300px; height:200px; background-color: transparent;"> </a></h1>
+        <h1 class="text-light"><a href="index.html"><img src="./assets/img/Watermark-logo.png" style="width:300px; opacity: 0.8; height:200px; background-color: transparent;"> </a></h1>
         <!-- <h5 style="margin-left:100px; margin-top:-15px; color:white;">Chartered Accountants</h5> -->
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
@@ -100,7 +171,15 @@
         <div class="carousel-container">
           <h2 class="animated fadeInDown">Welcome to <span>NSS & Associates</span></h2>
           <p class="animated fadeInUp">Our firm continuously strives to be the Premier Accounting and Consultancy firm that provides excellent service to our clients and an excellent quality of life for our associates.</p>
-          <a href="#about" class="btn-get-started animated fadeInUp scrollto">Read More</a>
+          <div style="margin-top:-10px;">
+            <span  class="animated fadeInUp text-white">Follow us on : </span>
+          <a href="#" target="_blank"><i class="bx bxl-facebook animated fadeInUp"></i></a>
+          <a href="#" target="_blank"><i class="bx bxl-twitter animated fadeInDown"></i></a>
+          <a href="#" target="_blank"><i class="bx bxl-google-plus animated fadeInUp"></i></a>
+          <a href="#" target="_blank"><i class="bx bxl-linkedin animated fadeInDown"></i></a>
+          <a href="#" target="_blank"><i class="bx bxl-youtube animated fadeInUp"></i></a>  
+        </div>
+          <a href="#about" class="btn-get-started btns animated btns-text  fadeInUp scrollto">Read More</a>
         </div>
       </div>
 
@@ -151,7 +230,6 @@
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
       <div class="container">
-
         <div class="section-title" data-aos="zoom-out">
           <h2>About</h2>
           <p>Who we are</p>
@@ -167,9 +245,11 @@
           <div class="col-lg-6 pt-4 pt-lg-0">
             
             <p>
-              We Will focus on helping clients design and build Tomorrow’s organisation. We provide real world solutions to complex business issues through audit and assurance functions, taxation-international and domestic, startup in India etc.
+              We Will focus on helping clients design and build Tomorrow’s organisation. We provide real world solutions to complex business issues through audit and <span id="dots">...</span><span id="more">assurance functions, taxation-international and domestic, startup in India etc.</span></p>
             </p>
-            <a href="#" class="btn-learn-more">Learn More</a>
+          
+            <button  onclick="myFunction()" id="myBtn" class="btn-learn-more">View More</button>
+            <!-- <a href="#" class="btn-learn-more">Learn More</a> -->
           </div>
         </div>
 
@@ -188,7 +268,7 @@
             <p> NSS & Associates is a team of distinguished chartered accountant, corporate financial advisors and tax consultants in India. Our firm of chartered accountants represents a coalition of specialized skills that is geared to offer sound financial solutions and advices. The organization is a congregation of professionally qualified and experienced persons who are committed to add value and optimize the benefits accruing to clients.</p>
           </div>
           <div class="col-lg-3 cta-btn-container text-center">
-            <a class="cta-btn align-middle" href="#contact">Call To Action</a>
+            <a class="cta-btn align-middle" href="tel:+917299393383">Call To Action</a>
           </div>
         </div>
 
@@ -209,7 +289,7 @@
     <div class="tab-content" data-aos="fade-up">
       <div class="tab-pane active show" id="tab-1">
         <div class="row">
-          <div class="col-lg-12 order-2 order-lg-1 mt-3 mt-lg-0">
+          <div class="col-lg-12 order-2 order-lg-1  mt-lg-0">
             <div class="fusion-fullwidth fullwidth-box nonhundred-percent-fullwidth non-hundred-percent-height-scrolling" style="background-color: rgba(255,255,255,0);background-position: center center;background-repeat: no-repeat;padding-top:0px;padding-right:30px;padding-bottom:0px;padding-left:30px;"><div class="fusion-builder-row fusion-row"><div class="fusion-layout-column fusion_builder_column fusion_builder_column_1_1  fusion-one-full fusion-column-first fusion-column-last 1_1" style="margin-top:0px;margin-bottom:0px;">
               <div class="fusion-column-wrapper" style="padding: 0px 0px 0px 0px;background-position:left top;background-repeat:no-repeat;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;" data-bg-url="">
                 <div
@@ -484,23 +564,23 @@
             <div class="info">
               <h2 class="mb-3">Vizag Branch:</h2>
               <div class="address">
-                <i class="icofont-google-map"></i>
-                <h4>Location:</h4>
+                <i class="bx bx-radio-circle-marked"></i>
+                <h4>Location</h4>
                 <p>A108 Adam Street, New York, NY 535022</p>
               </div>
               <div class="email">
-                <i class="icofont-envelope"></i>
-                <h4>Email:</h4>
+                <a   href="mailto:nsscateam@gmail.com"><i class="bx bx-at"></i>
+                <h4>Email</h4>
                 <p>nsscateam@gmail.com</p>
               </div>
               <div class="phone">
-                <i class="icofont-phone"></i>
-                <h4>Call:</h4>
-                <p>+1 5589 55488 55s</p>
+                  <a href="tel:+917299393383"><i class="bx bx-phone"></i></a> 
+                  <h4>Call</h4>
+                <p>+91 7299393383</p>
               </div>
               <div class="email">
-                <i class="icofont-envelope"></i>
-                <h4>State :</h4>
+                <i class="bx bx-broadcast"></i>
+                <h4>State</h4>
                 <p>Andhra Pradesh</p>
               </div>
             </div>
@@ -509,26 +589,28 @@
             <div class="info">
               <h2 class="mb-3">Chennai Branch:</h2>
               <div class="address">
-                <i class="icofont-google-map"></i>
-                <h4>Location:</h4>
+                <i class="bx bx-radio-circle-marked"></i>
+                <h4>Location</h4>
                 <p>A108 Adam Street, New York, NY 535022</p>
               </div>
 
               <div class="email">
-                <i class="icofont-envelope"></i>
-                <h4>Email:</h4>
-                <p>nsscateam@gmail.com</p>
+                <a   href="mailto:nsscateam@gmail.com"><i class="bx bx-at"></i>
+                <h4>Email</h4>
+                <!-- <a class="btn  btn-xl js-scroll-trigger"  href="mailto:nsscateam@gmail.com">
+                  nsscateam@gmail.com</a> -->
+                <p>nsscateam@gmail.com</p></a>
               </div>
 
               <div class="phone">
-                <i class="icofont-phone"></i>
-                <h4>Call:</h4>
-                <p>+1 5589 55488 55s</p>
+               <a href="tel:+917299393383"><i class="bx bx-phone"></i></a> 
+                <h4>Call</h4>
+                <p>+91 7299393383</p>
               </div>
 
               <div class="email">
-                <i class="icofont-envelope"></i>
-                <h4>State :</h4>
+                <i class="bx bx-broadcast"></i>
+                <h4>State</h4>
                 <p>Tamil Nadu</p>
               </div>
 
@@ -539,11 +621,11 @@
             <div class="info">
               <div>
               <h3> For Chennai Address :</h3>
-              <img src="./assets/img/Chennai.png" style="height:150px;">
+              <img src="./assets/img/Chennai.png" class="image-QrCode" style="height:150px;">
             </div>
             <div class="mt-2">
             <h3>For Vizag Address :</h3>
-              <img src="./assets/img/Vizag.png" style="height:180px; margin-top:-10px; margin-left:-15px;">
+              <img src="./assets/img/Vizag.png"  class="image-QrCode" style="height:180px; margin-top:-10px; margin-left:-15px;">
             </div>
 
             </div>
@@ -586,21 +668,24 @@
       </div>
     </section><!-- End Contact Section -->
     <div class="container">
+      <div class="info">
       <div class="row">
       <div class="col-lg-6" data-aos="fade-right">
-        <h2>Chennai Branch Location :</h2>
+        <h2>  <i class="bx bx-broadcast"> </i> Chennai Branch Location : </h2>
         <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d3886.0492776681826!2d80.28745611452685!3d13.09606354077431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e2!4m5!1s0x3a526f45380ddfd5%3A0x27945aae5ad107f0!2s24%2F106%2C%20Armenian%20St%2C%20Mannady%2C%20George%20Town%2C%20Chennai%2C%20Tamil%20Nadu%20600001!3m2!1d13.0956835!2d80.2886267!4m3!3m2!1d13.0958089!2d80.29048279999999!5e0!3m2!1sen!2sin!4v1585998747210!5m2!1sen!2sin"
          width="300" height="450" frameborder="0" style="border:0;"  allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
       </div>
       <div class="col-lg-6" data-aos="fade-left">
-        <h2>Vizag Branch Location :</h2>
+        <h2> <i class="bx bx-broadcast"></i> Vizag Branch Location :</h2>
         <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1900.8290607817967!2d82.60993475170092!3d17.666344051832652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sbus%20stand!5e0!3m2!1sen!2sin!4v1585998902601!5m2!1sen!2sin"
          width="300" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
       </div>
     </div>
+  </div>
     </div>
-    <img class="watermarking" src="./assets/img/Watermark-logo.png">
-    
+    <div class="content-mobile">
+    <img class="watermarking" src="assets/img/Watermark-logo-removebg-preview.png">
+  </div>
   </main><!-- End #main -->
 <!-- POP-Up -->
 <!-- Button trigger modal -->
@@ -625,17 +710,47 @@
     </div>
   </div>
 </div>
+<div class="content-mobile">
+<div class="fixed-callout" style="right:25px">
+  <!-- <div class="visible-xs mbtn-callout">
+      <a class="font-only what-col" href="https://wa.me/919696960029?text=Hi%20Mam%2C%20I%20have%20a%20query.%20Please%20help%20me." target="_blank">
+          <img src="https://www.ibtindia.com/assets/images/pop-whatsapp.png">
+      </a>
+<a class=" font-only" href="tel:9696960029">
+<img src="https://www.ibtindia.com/assets/images/pop-12.png"></a>
+  </div> -->
+ 
+  <div class="hidden-xs">
+      <h4>Quick Connect</h4>
+      <a class="font-only what-col" href="https://wa.me/917299393383?text=Hi%20Mam%2C%20I%20have%20a%20query.%20Please%20help%20me." target="_blank">
+          <img src="https://www.ibtindia.com/assets/images/pop-whatsapp.png">
+          Whatsapp Now</a>
+      <a class=" font-only" href="tel:+917299393383"><img src="https://www.ibtindia.com/assets/images/pop-12.png" style="padding-right:5px;">7299393383</a>
+  </div>
+</div>
+</div>
+
   <!-- ======= Footer ======= -->
   <footer id="footer">
     <div class="container">
       <h3>NSS & Associates</h3>
-      <div class="social-links">
-        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="https://www.moneycontrol.com/india/stockpricequote/banks-private-sector/indusindbank/IIB" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      <div class="social-links" style="margin-bottom:5px;">
+        Follow Us on :
+        <a href="https://twitter.com/login?lang=en"  target="_blank" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="https://www.facebook.com/" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="https://www.instagram.com/accounts/login/?hl=en"  target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="https://www.skype.com/en/"  target="_blank" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a href="https://www.linkedin.com/"  target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        <div class="mt-3">
+        Get in Touch:
+        <a href="https://api.whatsapp.com/send?phone=919030368899" target="_blank">
+          <i class="bx bxl-whatsapp"></i>	
+                                                </a>
+         <a href="https://m.me/" target="_blank">
+                                                  <i class="fab fa-facebook-messenger"></i></a>
+                                                </div>
       </div>
+     
       <div class="copyright">
         &copy; Copyright <strong><span> &copy;2020</span></strong>. All Rights Reserved
       </div>
@@ -644,8 +759,8 @@
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/selecao-bootstrap-template/ -->
-        Designed by <a href="https://github.com/ArjunMajeti" target="_blank">
-        Arjun Majeti</a>
+        Designed & Maintained by <a href="https://github.com/ArjunMajeti" target="_blank">
+        <b>Arjun Majeti</b></a>
       </div>
     </div>
   </footer><!-- End Footer -->
@@ -671,6 +786,24 @@
         $('#staticBackdrop').modal('show');
     });
 </script> -->
+<script>
+
+  function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}
+  </script>
 </body>
 
 </html>
