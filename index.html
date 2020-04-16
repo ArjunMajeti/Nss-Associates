@@ -72,9 +72,55 @@
   height:50px;
 }
 #more {display: none;}
+.fixed-callout {
+    padding: 15px 20px;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    bottom: 27px;
+    text-align: center;
+    animation: move 6s infinite forwards;
+    z-index: 9999;
+}
+.hidden-xs {
+    display: block;
+}
+.fixed-callout h4 {
+    padding: 0px;
+    margin: 0px 0px 8px 0px;
+    color: #0079be;
+    font-weight: bold;
+}
+.fixed-callout a {
+    display: block;
+    padding: 2px 0;
+    font-size: 16px;
+    color: #323232 !important;
+    text-decoration: none;
+}
+.fixed-callout img {
+    width: 24px;
+}
+img {
+    vertical-align: middle;
+}
+
 #features{
   padding: 10px 0;
 }
+
+.content-mobile {display: block;}
+
+@media screen and (max-width: 768px) {
+
+.content-mobile {display: none;}
+
+}
+/* .image-QrCode{
+  border-radius: 10px;
+    box-shadow: 0 15px 15px black;
+} */
   </style>
 </head>
 
@@ -133,7 +179,7 @@
           <a href="#" target="_blank"><i class="bx bxl-linkedin animated fadeInDown"></i></a>
           <a href="#" target="_blank"><i class="bx bxl-youtube animated fadeInUp"></i></a>  
         </div>
-          <a href="#about" class="btn-get-started animated fadeInUp scrollto">Read More</a>
+          <a href="#about" class="btn-get-started btns animated btns-text  fadeInUp scrollto">Read More</a>
         </div>
       </div>
 
@@ -184,7 +230,6 @@
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
       <div class="container">
-
         <div class="section-title" data-aos="zoom-out">
           <h2>About</h2>
           <p>Who we are</p>
@@ -244,7 +289,7 @@
     <div class="tab-content" data-aos="fade-up">
       <div class="tab-pane active show" id="tab-1">
         <div class="row">
-          <div class="col-lg-12 order-2 order-lg-1 mt-3 mt-lg-0">
+          <div class="col-lg-12 order-2 order-lg-1  mt-lg-0">
             <div class="fusion-fullwidth fullwidth-box nonhundred-percent-fullwidth non-hundred-percent-height-scrolling" style="background-color: rgba(255,255,255,0);background-position: center center;background-repeat: no-repeat;padding-top:0px;padding-right:30px;padding-bottom:0px;padding-left:30px;"><div class="fusion-builder-row fusion-row"><div class="fusion-layout-column fusion_builder_column fusion_builder_column_1_1  fusion-one-full fusion-column-first fusion-column-last 1_1" style="margin-top:0px;margin-bottom:0px;">
               <div class="fusion-column-wrapper" style="padding: 0px 0px 0px 0px;background-position:left top;background-repeat:no-repeat;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;" data-bg-url="">
                 <div
@@ -576,11 +621,11 @@
             <div class="info">
               <div>
               <h3> For Chennai Address :</h3>
-              <img src="./assets/img/Chennai.png" style="height:150px;">
+              <img src="./assets/img/Chennai.png" class="image-QrCode" style="height:150px;">
             </div>
             <div class="mt-2">
             <h3>For Vizag Address :</h3>
-              <img src="./assets/img/Vizag.png" style="height:180px; margin-top:-10px; margin-left:-15px;">
+              <img src="./assets/img/Vizag.png"  class="image-QrCode" style="height:180px; margin-top:-10px; margin-left:-15px;">
             </div>
 
             </div>
@@ -626,7 +671,7 @@
       <div class="info">
       <div class="row">
       <div class="col-lg-6" data-aos="fade-right">
-        <h2>  <i class="bx bx-broadcast"> Chennai Branch Location : </i></h2>
+        <h2>  <i class="bx bx-broadcast"> </i> Chennai Branch Location : </h2>
         <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d3886.0492776681826!2d80.28745611452685!3d13.09606354077431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e2!4m5!1s0x3a526f45380ddfd5%3A0x27945aae5ad107f0!2s24%2F106%2C%20Armenian%20St%2C%20Mannady%2C%20George%20Town%2C%20Chennai%2C%20Tamil%20Nadu%20600001!3m2!1d13.0956835!2d80.2886267!4m3!3m2!1d13.0958089!2d80.29048279999999!5e0!3m2!1sen!2sin!4v1585998747210!5m2!1sen!2sin"
          width="300" height="450" frameborder="0" style="border:0;"  allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
       </div>
@@ -638,8 +683,9 @@
     </div>
   </div>
     </div>
+    <div class="content-mobile">
     <img class="watermarking" src="assets/img/Watermark-logo-removebg-preview.png">
-    
+  </div>
   </main><!-- End #main -->
 <!-- POP-Up -->
 <!-- Button trigger modal -->
@@ -664,6 +710,25 @@
     </div>
   </div>
 </div>
+<div class="content-mobile">
+<div class="fixed-callout" style="right:25px">
+  <!-- <div class="visible-xs mbtn-callout">
+      <a class="font-only what-col" href="https://wa.me/919696960029?text=Hi%20Mam%2C%20I%20have%20a%20query.%20Please%20help%20me." target="_blank">
+          <img src="https://www.ibtindia.com/assets/images/pop-whatsapp.png">
+      </a>
+<a class=" font-only" href="tel:9696960029">
+<img src="https://www.ibtindia.com/assets/images/pop-12.png"></a>
+  </div> -->
+ 
+  <div class="hidden-xs">
+      <h4>Quick Connect</h4>
+      <a class="font-only what-col" href="https://wa.me/917299393383?text=Hi%20Mam%2C%20I%20have%20a%20query.%20Please%20help%20me." target="_blank">
+          <img src="https://www.ibtindia.com/assets/images/pop-whatsapp.png">
+          Whatsapp Now</a>
+      <a class=" font-only" href="tel:+917299393383"><img src="https://www.ibtindia.com/assets/images/pop-12.png" style="padding-right:5px;">7299393383</a>
+  </div>
+</div>
+</div>
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
@@ -678,7 +743,7 @@
         <a href="https://www.linkedin.com/"  target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
         <div class="mt-3">
         Get in Touch:
-        <a href="https://api.whatsapp.com/send?phone=917299393383" target="_blank">
+        <a href="https://api.whatsapp.com/send?phone=919030368899" target="_blank">
           <i class="bx bxl-whatsapp"></i>	
                                                 </a>
          <a href="https://m.me/" target="_blank">
